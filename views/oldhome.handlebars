@@ -1,0 +1,66 @@
+<section class="container-fluid my-4">
+  <article>
+    <table class="table table-bordered table-hover table-responsive">
+      <thead class="table-dark te">
+        <tr>
+          <th>Name</th>
+          <th>ID</th>
+          <th>Gender</th>
+          <th>Education</th>
+          <th>Experience</th>
+          <th>Salary</th>
+          <th>Designation</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Location</th>
+          <th>Skills</th>
+          <th>Photo</th>
+          <th>View Profile</th>
+          <th>Edit Profile</th>
+          <th>Delete Profile</th>
+
+        </tr>
+      </thead>
+      <tbody class="bg-white">
+        {{#each payload}}
+          <tr>
+            <td>{{emp_name}}</td>
+            <td>{{emp_id}}</td>
+            <td>{{emp_gender}}</td>
+            <td>{{emp_edu}}</td>
+            <td>{{emp_exp}}</td>
+            <td>{{emp_salary}}</td>
+            <td>{{emp_des}}</td>
+            <td>{{emp_email}}</td>
+            <td>{{emp_phone}}</td>
+            <td>{{emp_loc}}</td>
+            <td>{{emp_skills}}</td>
+            <td><img
+                class="img-thumbnail"
+                src="{{trimString emp_photo.0.path}}"
+                alt="{{emp_name}}"
+              /></td>
+            <td><a
+                href="/employee/{{_id}}"
+                class="btn btn-primary btn-sm btn-block"
+              >View Profile</a></td>
+            <td><a
+                href="/employee/edit-emp/{{_id}}"
+                class="btn btn-primary btn-sm btn-block"
+              >Edit Profile</a></td>
+            <td>
+              <form
+                class="float-right text-danger"
+                method="post"
+                action="/employee/delete-emp/{{_id}}?_method=DELETE"
+              >
+                <input type="hidden" name="_method" value="DELETE" />
+                <button class="btn btn-danger">delete</button>
+              </form>
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </article>
+</section>
