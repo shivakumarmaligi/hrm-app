@@ -1,0 +1,95 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: aquamarine;
+}
+#navbarBlock {
+  background-color: rgb(202, 243, 119);
+  height: 70px;
+  width: 100%;
+  box-shadow: 1px -2px 2px 2px red;
+}
+#navbarBlock article {
+  width: 85%;
+  display: flex;
+  align-items: center;
+}
+#navbarBlock article > div {
+  flex-basis: 50%;
+}
+.logoBlock img {
+  width: auto;
+  height: 42px;
+}
+.menuBlock nav ul {
+  display: flex;
+  list-style: none;
+}
+.menuBlock nav ul li a {
+  color: orange;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.menuBlock nav ul li a:hover {
+  background-color: #efefef;
+  border-radius: 10px;
+  column-rule: #111;
+}
+/* contact form */
+#contactForm article {
+  width: 85%;
+  margin: 10px auto;
+  padding: 10px;
+  background-color: #fff;
+  height: 100vh;
+}
+#contactForm article form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#contactForm article div {
+  flex-basis: 23%;
+  margin: 4px;
+  min-height: 100px;
+}
+#contactForm article div label {
+  width: 100%;
+  display: block;
+  font-weight: bold;
+  padding: 10px 0;
+}
+#contactForm article div input,
+#contactForm article div textarea {
+  width: 100%;
+  display: block;
+  border-radius: 4px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+#contactForm article div button {
+  background-color: orangered;
+  color: #fff;
+  width: 200px;
+  padding: 10px;
+  border: 1px solid rgb(236, 193, 178);
+  border-radius: 4px;
+  cursor: pointer;
+}
+#contactFrom article div button:hover {
+  background-color: #111;
+}
+h1 {
+  color: orangered;
+  padding: 10px 0;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+div.textArea {
+  flex-basis: 100% !important;
+}
